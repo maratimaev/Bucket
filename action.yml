@@ -1,7 +1,7 @@
-name: 'Checkstyle for Java'
+name: 'Checkstyle for JJava'
 # description should be no more than 125 characters!
 description: '🐶 Run checkstyle analysis on Java code and report results directly to pull request with the help of reviewdog.'
-author: 'Dmitriy Belyaev'
+author: 'DBel'
 inputs:
   github_token:
     description: 'GITHUB_TOKEN'
