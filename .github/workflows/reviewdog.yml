@@ -26,7 +26,7 @@ jobs:
           github_token: ${{ secrets.github_token }}
           # Change reviewdog reporter if you need [github-pr-check, github-check, github-pr-review].
           reporter: github-pr-review
-          fail_on_error: true 
+          fail_on_error: false 
           # Change reporter level if you need [info,warning,error].
           # GitHub Status Check won't become failure with a warning.
           level: warning          
