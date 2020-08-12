@@ -17,6 +17,11 @@ public class DiscountsImpl implements Discounts {
         for (Discount discount: this.discounts) {
             sum = sum + discount.get(bucket);
         }
+
+        if(1==1) {int i=0;}
+        if(2==2) {}
+        if(3==3) {}
+        if(4==4) {}
         return sum;
     }
 
