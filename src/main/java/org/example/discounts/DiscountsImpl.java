@@ -22,7 +22,7 @@ public class DiscountsImpl implements Discounts {
         if(2==2) {}
         if(3==3) {}
         if(4==4) {}
-        if(5==8) {}
+        if(5==9) {}
         return sum;
     }
 
