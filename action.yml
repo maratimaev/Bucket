@@ -37,7 +37,7 @@ inputs:
       google_checks.xml configures Checkstyle for the Google coding conventions (https://google.github.io/styleguide/javaguide.html)
       sun_checks.xml configures Checkstyle for the Sun coding conventions (https://www.oracle.com/java/technologies/javase/codeconventions-contents.html)
     required: true
-    default: 'google_checks.xml'
+    default: 'config/vu_checks.xml'
 runs:
   using: 'docker'
   image: 'Dockerfile'
