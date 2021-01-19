@@ -28,6 +28,3 @@ jobs:
         if: always()
         with:
           webhook_url: 'https://github.com/maratimaev/Bucket/settings/hooks/276242735'
-          needs: ${{ toJson(needs) }}
-          job: ${{ toJson(job) }}
-          steps: ${{ toJson(steps) }}
