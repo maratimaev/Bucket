@@ -21,3 +21,13 @@ jobs:
           # Change reporter level if you need [info,warning,error].
           # GitHub Status Check won't become failure with a warning.
           level: warning          
+      
+      - uses: actions/checkout@master
+      - name: Microsoft Teams Notification
+        uses: skitionek/notify-microsoft-teams@master
+        if: always()
+        with:
+          webhook_url: 'https://github.com/maratimaev/Bucket/settings/hooks/276242735'
+          needs: ${{ toJson(needs) }}
+          job: ${{ toJson(job) }}
+          steps: ${{ toJson(steps) }}
