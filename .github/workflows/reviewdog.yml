@@ -32,3 +32,22 @@ jobs:
           job: ${{ toJson(job) }}
           steps: ${{ toJson(steps) }}
       
+      - name: Microsoft Teams Deploy Card
+        uses: toko-bifrost/ms-teams-deploy-card@3.1.2
+        with:
+          webhook-uri: 'https://vegaecm2com.webhook.office.com/webhookb2/173b096e-94c0-44fd-bf19-fe465b340896@99e08ae2-e5a3-4bd4-a437-580fee5922c0/IncomingWebhook/bf25ba9a4883409981e2312fd400490c/5dd46c77-80a2-4d5d-9666-06b922ccebfe'
+          github-token: ${{ github.token }}
+          environment: None
+          timezone: "Asia/Kolkata"
+          card-layout-start: complete 
+          card-layout-exit: complete 
+          show-on-start: true 
+          show-on-exit: true         
+          custom-facts: |
+            - name: Repository
+              value: ${{github.repository}}
+            - name: ImageTag
+              value: ${{ github.sha }}
+          enable-view-status-action: true 
+          enable-review-diffs-action: true 
+          view-status-action-text: "View Status"
