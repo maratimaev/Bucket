@@ -25,6 +25,6 @@ jobs:
       - uses: actions/checkout@master
       - name: Microsoft Teams Notification
         uses: skitionek/notify-microsoft-teams@master
-        if: always()
+        if: success()
         with:
           webhook_url: https://github.com/maratimaev/Bucket/settings/hooks/276245308
