@@ -27,4 +27,4 @@ jobs:
         uses: skitionek/notify-microsoft-teams@master
         if: always()
         with:
-          webhook_url: 'https://github.com/maratimaev/Bucket/settings/hooks/276242735'
+          webhook_url: https://github.com/maratimaev/Bucket/settings/hooks/276245308
