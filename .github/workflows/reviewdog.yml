@@ -12,12 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: toko-bifrost/ms-teams-deploy-card@3.1.2
-        if: always()
-        with:
-          github-token: ${{ secrets.github_token }}
-          webhook-uri: ${{ secrets.MSTEAMS_WEBHOOK }}
-
       - uses: maratimaev/Bucket@master
         with:
           github_token: ${{ secrets.github_token }}
@@ -26,13 +20,7 @@ jobs:
           fail_on_error: true 
           # Change reporter level if you need [info,warning,error].
           # GitHub Status Check won't become failure with a warning.
-          level: warning          
-
-      - uses: toko-bifrost/ms-teams-deploy-card@3.1.2
-        if: always()
-        with:
-          github-token: ${{ secrets.github_token }}
-          webhook-uri: ${{ secrets.MSTEAMS_WEBHOOK }}
+          level: warning
 
 #      - uses: actions/checkout@master
 #      - name: Microsoft Teams Notification
@@ -45,23 +33,23 @@ jobs:
 #          steps: ${{ toJson(steps) }}
 
 #      - uses: actions/checkout@v2
-#      - name: Microsoft Teams Deploy Card
-#        uses: toko-bifrost/ms-teams-deploy-card@3.1.2
-#        if: always()
-#        with:
-#          webhook-uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
-#          github-token: ${{ github.token }}
-#          environment: None
+      - name: Microsoft Teams Deploy Card
+        uses: toko-bifrost/ms-teams-deploy-card@3.1.2
+        if: always()
+        with:
+          webhook-uri: ${{ secrets.MSTEAMS_WEBHOOK }}
+          github-token: ${{ github_token }}
+          environment: None
 #          timezone: "Asia/Kolkata"
-##          card-layout-start: compact
-#          card-layout-exit: complete
-#          show-on-start: false
-#          show-on-exit: true
-#          custom-facts: |
-#            - name: Repository
-#              value: ${{github.repository}}
-#            - name: ImageTag
-#              value: ${{ github.sha }}
-#          enable-view-status-action: true
-#          enable-review-diffs-action: true
-#          view-status-action-text: "View Status"
+#          card-layout-start: compact
+          card-layout-exit: complete
+          show-on-start: false
+          show-on-exit: true
+          custom-facts: |
+            - name: Repository
+              value: ${{github.repository}}
+            - name: ImageTag
+              value: ${{ github.sha }}
+          enable-view-status-action: true
+          enable-review-diffs-action: true
+          view-status-action-text: "View Status"
