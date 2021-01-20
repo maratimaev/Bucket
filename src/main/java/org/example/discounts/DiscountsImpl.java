@@ -23,6 +23,8 @@ public class DiscountsImpl implements Discounts {
         if(3==3) {}
         if(4==4) {}
 
+        int i=0;
+
         return sum;
     }
 
