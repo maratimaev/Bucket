@@ -14,10 +14,10 @@ jobs:
       - uses: actions/checkout@v2
 
       - uses: toko-bifrost/ms-teams-deploy-card@@3.1.2
-          if: always()
-          with:
-            github-token: ${{ secrets.github_token }}
-            webhook-uri: ${{ secrets.MSTEAMS_WEBHOOK }}
+        if: always()
+        with:
+          github-token: ${{ secrets.github_token }}
+          webhook-uri: ${{ secrets.MSTEAMS_WEBHOOK }}
 
       - uses: maratimaev/Bucket@master
         with:
@@ -30,10 +30,10 @@ jobs:
           level: warning          
 
       - uses: toko-bifrost/ms-teams-deploy-card@@3.1.2
-          if: always()
-          with:
-            github-token: ${{ secrets.github_token }}
-            webhook-uri: ${{ secrets.MSTEAMS_WEBHOOK }}
+        if: always()
+        with:
+          github-token: ${{ secrets.github_token }}
+          webhook-uri: ${{ secrets.MSTEAMS_WEBHOOK }}
 
 #      - uses: actions/checkout@master
 #      - name: Microsoft Teams Notification
