@@ -43,7 +43,7 @@ jobs:
 #          timezone: "Asia/Kolkata"
           card-layout-start: compact
           card-layout-exit: complete
-          show-on-start: false
+          show-on-start: true
           show-on-exit: true
           show-on-failure: true
           custom-facts: |
