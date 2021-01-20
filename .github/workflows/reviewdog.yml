@@ -41,16 +41,14 @@ jobs:
           github-token: ${{ secrets.github_token }}
           environment: None
 #          timezone: "Asia/Kolkata"
-          card-layout-start: compact
+#          card-layout-start: compact
           card-layout-exit: complete
-          show-on-start: true
+          show-on-start: false
           show-on-exit: true
-          show-on-failure: true
+#          show-on-failure: true
           custom-facts: |
             - name: Repository
               value: ${{github.repository}}
             - name: ImageTag
               value: ${{ github.sha }}
-          enable-view-status-action: true
-          enable-review-diffs-action: true
-          view-status-action-text: "View Status"
+#          view-status-action-text: "View Status"
