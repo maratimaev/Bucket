@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
+      
       - uses: maratimaev/Bucket@master
         with:
           github_token: ${{ secrets.github_token }}
@@ -33,24 +33,22 @@ jobs:
 #          steps: ${{ toJson(steps) }}
 
 #      - uses: actions/checkout@v2
-      - name: Microsoft Teams Deploy Card
-        uses: toko-bifrost/ms-teams-deploy-card@3.1.2
+#      - name: Microsoft Teams Deploy Card
+      - uses: toko-bifrost/ms-teams-deploy-card@3.1.2
         if: always()
         with:
           webhook-uri: ${{ secrets.MSTEAMS_WEBHOOK }}
           github-token: ${{ secrets.github_token }}
           environment: None
 #          timezone: "Asia/Kolkata"
-          card-layout-start: compact
+#          card-layout-start: compact
           card-layout-exit: complete
-          show-on-start: true
+          show-on-start: false
           show-on-exit: true
-          show-on-failure: true
+#          show-on-failure: true
           custom-facts: |
             - name: Repository
               value: ${{github.repository}}
             - name: ImageTag
               value: ${{ github.sha }}
-          enable-view-status-action: true
-          enable-review-diffs-action: true
-          view-status-action-text: "View Status"
+#          view-status-action-text: "View Status"
