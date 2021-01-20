@@ -41,10 +41,11 @@ jobs:
           github-token: ${{ github_token }}
           environment: None
 #          timezone: "Asia/Kolkata"
-#          card-layout-start: compact
+          card-layout-start: compact
           card-layout-exit: complete
           show-on-start: false
           show-on-exit: true
+          show-on-failure: true
           custom-facts: |
             - name: Repository
               value: ${{github.repository}}
