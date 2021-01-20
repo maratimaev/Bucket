@@ -14,7 +14,7 @@ jobs:
 
       - uses: maratimaev/Bucket@master
         with:
-          github_token: ${{ secrets.github_token }}
+          github_token: ${{ github_token }}
           # Change reviewdog reporter if you need [github-pr-check, github-check, github-pr-review].
           reporter: github-pr-review
           fail_on_error: true 
